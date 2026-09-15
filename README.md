@@ -2,6 +2,8 @@
 
 ## Deskripsi Sistem
 
+<p align="center"> <img src="smart-locker-iot/docs/images/diagram-ipo.png"> </p>
+
 NodeMCU ESP8266 dan Arduino Uno R3 bertindak sebagai dua pengendali utama yang saling berkomunikasi secara serial melalui jalur RX/TX. Pembagian tugas keduanya sebagai berikut:
 
 - **NodeMCU ESP8266** bertugas membaca kartu RFID melalui modul RFID (RC522), meneruskan UID kartu yang terbaca ke Arduino Uno melalui komunikasi serial, serta mengirimkan seluruh hasil proses—baik status pembacaan kartu maupun status pergerakan motor servo—ke aplikasi Telegram melalui Telegram Bot. NodeMCU juga menyediakan koneksi internet (WiFi) sebagai jembatan komunikasi antara sistem dan Telegram.

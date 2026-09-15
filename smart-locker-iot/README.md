@@ -122,21 +122,6 @@ dipakai di firmware NodeMCU.
    mengirim notifikasi Telegram lanjutan.
 6. Semua aktivitas dapat dipantau real-time lewat **web dashboard**.
 
-## Cara Publish ke GitHub
-
-```bash
-cd smart-locker-iot
-git init
-git add .
-git commit -m "Initial commit: smart locker IoT with database & web monitoring"
-git branch -M main
-git remote add origin https://github.com/<username>/<nama-repo>.git
-git push -u origin main
-```
-
-> **Penting:** sebelum publish, ganti nilai `ssid`, `password`, dan
-> `botToken` di `firmware/esp8266/esp8266.ino` dengan placeholder (jangan
-> unggah kredensial WiFi/Telegram asli ke repo publik).
 
 ## Saran Pengembangan Lanjutan
 
@@ -145,4 +130,3 @@ git push -u origin main
 - Enkripsi komunikasi NodeMCU ↔ server (HTTPS) bila diakses di luar jaringan lokal.
 
 ---
-*Dikembangkan sebagai bagian dari penelitian tugas akhir (skripsi) S1.*
