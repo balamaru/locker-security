@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smart Locker - Monitoring Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔐 Smart Locker Monitoring</h1>
+    <p id="status-indicator">Menghubungkan ke server...</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Status Box / Loker</h2>
+      <div id="lockers-grid" class="lockers-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Kartu RFID Terdaftar</h2>
+      <form id="add-card-form" class="inline-form">
+        <input type="text" id="input-uid" placeholder="UID (contoh: DE 82 5B 6E)" required />
+        <input type="text" id="input-name" placeholder="Nama pengguna" required />
+        <button type="submit">Daftarkan Kartu</button>
+      </form>
+      <table id="cards-table">
+        <thead>
+          <tr><th>UID</th><th>Nama</th><th>Terdaftar Sejak</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Riwayat Aktivitas</h2>
+      <table id="logs-table">
+        <thead>
+          <tr><th>Waktu</th><th>UID</th><th>Nama</th><th>Box</th><th>Aksi</th><th>Keterangan</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
